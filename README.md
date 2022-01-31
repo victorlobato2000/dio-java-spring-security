@@ -1,1 +1,1 @@
-Spring Security - JWT (Jason Web Token) 
+Spring Security - JWT (JSON Web Token) 
