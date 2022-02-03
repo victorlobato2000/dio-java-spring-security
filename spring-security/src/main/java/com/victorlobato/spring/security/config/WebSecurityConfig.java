@@ -1,5 +1,6 @@
-package com.victorlobato.spring.security;
+package com.victorlobato.spring.security.config;
 
+import com.victorlobato.spring.security.service.SecurityDatabaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -17,8 +18,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private SecurityDatabaseService securityService;
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+    @Autowired
+    protected void globalUserDetails(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(securityService).passwordEncoder((NoOpPasswordEncoder.getInstance()));
     }
 

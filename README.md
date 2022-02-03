@@ -1,1 +1,1 @@
-Spring Security - JWT (JSON Web Token) 
+Adicionando segurança a uma API usando Spring Security

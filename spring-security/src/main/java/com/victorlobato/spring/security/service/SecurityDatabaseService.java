@@ -1,4 +1,4 @@
-package com.victorlobato.spring.security;
+package com.victorlobato.spring.security.service;
 
 import com.victorlobato.spring.security.model.User;
 import com.victorlobato.spring.security.repository.UserRepository;
@@ -18,7 +18,6 @@ public class SecurityDatabaseService implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;
-
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
